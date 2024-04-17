@@ -3,4 +3,7 @@
     <string name="welcome_username">Welcome, [username]!</string>
     <string name="reports">Reports</string>
     <string name="events_Button">Events</string>
+    <string name="logout_Button">Logout</string>
+    <string name="vehicles">Vehicles</string>
+    <string name="bitmile_LP_Title">BitMile</string>
 </resources>

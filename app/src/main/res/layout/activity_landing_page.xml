@@ -10,39 +10,75 @@
         android:id="@+id/welcome_Username"
         android:layout_width="294dp"
         android:layout_height="40dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="sans-serif"
         android:text="@string/welcome_username"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/appName_LP" />
 
     <Button
         android:id="@+id/button_LP_events"
         android:layout_width="150dp"
         android:layout_height="75dp"
-        android:layout_margin="75dp"
-        android:layout_marginTop="75dp"
+        android:layout_margin="25dp"
+        android:layout_marginTop="25dp"
         android:text="@string/events_Button"
-        android:textSize="18sp"
         android:textAlignment="center"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome_Username" />
 
     <Button
-        android:id="@+id/button_LP_Reports"
+        android:id="@+id/button_LP_reports"
         android:layout_width="150dp"
         android:layout_height="75dp"
         android:layout_margin="25dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="68dp"
         android:text="@string/reports"
+        android:textAlignment="center"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_LP_events" />
+
+    <Button
+        android:id="@+id/button_LP_logout"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="35dp"
+        android:text="@string/logout_Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_LP_vehicles"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/vehicles"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_LP_reports" />
+
+    <TextView
+        android:id="@+id/appName_LP"
+        android:layout_width="194dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="35dp"
+        android:text="@string/bitmile_LP_Title"
+        android:textSize="50sp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_LP_events" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
