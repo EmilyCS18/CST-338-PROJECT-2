@@ -6,4 +6,5 @@
     <string name="logout_Button">Logout</string>
     <string name="vehicles">Vehicles</string>
     <string name="bitmile_LP_Title">BitMile</string>
+    <string name="admin_stuff">Admin Stuff</string>
 </resources>
