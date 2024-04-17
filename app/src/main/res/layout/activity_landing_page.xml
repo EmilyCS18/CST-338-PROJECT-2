@@ -6,4 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".LandingPage">
 
+    <TextView
+        android:id="@+id/welcome_Username"
+        android:layout_width="294dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/welcome_username"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_LP_events"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_margin="75dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/events_Button"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_Username" />
+
+    <Button
+        android:id="@+id/button_LP_Reports"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:layout_margin="25dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/reports"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_LP_events" />
 </androidx.constraintlayout.widget.ConstraintLayout>
