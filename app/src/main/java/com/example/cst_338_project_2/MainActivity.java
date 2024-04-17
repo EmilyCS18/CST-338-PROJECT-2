@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
+    //random comment to make a commit
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
