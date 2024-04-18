@@ -20,7 +20,7 @@ public class SignupActivity extends AppCompatActivity {
     EditText signupName, signupEmail, signupUsername, signupPassword;
     TextView loginRedirectText;
     Button signupButton;
-    //FirebaseDatabase database;
+    //FirebaseDatabase database;   Fix db
     //DatabaseReference reference;
 
     @Override
