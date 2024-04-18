@@ -10,12 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
+
 
 import org.w3c.dom.Text;
 
@@ -38,14 +33,14 @@ public class LoginActivity extends AppCompatActivity {
         signupRedirectText = findViewById(R.id.signupRedirectText);
         loginButton = findViewById(R.id.login_button);
 
-        addPredefinedUsers();
+        // addPredefinedUsers();
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!validateUsername() | !validatePassword()){
+                if (!validateUsername() | !validatePassword()) {
 
-                }else {
+                } else {
                     checkUser();
                 }
             }
@@ -59,9 +54,9 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    public Boolean validateUsername(){
+    public Boolean validateUsername() {
         String val = loginUsername.getText().toString();
-        if (val.isEmpty()){
+        if (val.isEmpty()) {
             loginUsername.setError("Username can't be empty");
             return false;
         } else {
@@ -70,9 +65,9 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    public Boolean validatePassword(){
+    public Boolean validatePassword() {
         String val = loginPassword.getText().toString();
-        if (val.isEmpty()){
+        if (val.isEmpty()) {
             loginPassword.setError("Password can't be empty");
             return false;
         } else {
@@ -81,15 +76,15 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    public void checkUser(){
+    public void checkUser() {
         String userUsername = loginUsername.getText().toString().trim();
         String userPassword = loginPassword.getText().toString().trim();
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-        Query checkUserDatabase = reference.orderByChild("username").equalTo(userUsername);
+        //DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+        //Query checkUserDatabase = reference.orderByChild("username").equalTo(userUsername);
 
-        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
+        // checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+         /*   @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 if(snapshot.exists()){
@@ -142,5 +137,6 @@ public class LoginActivity extends AppCompatActivity {
             this.password = password;
             this.isAdmin = isAdmin;
         }
+    } */
     }
 }
