@@ -38,6 +38,8 @@ public class LoginActivity extends AppCompatActivity {
         signupRedirectText = findViewById(R.id.signupRedirectText);
         loginButton = findViewById(R.id.login_button);
 
+        addPredefinedUsers();
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,10 +95,11 @@ public class LoginActivity extends AppCompatActivity {
                 if(snapshot.exists()){
                     loginUsername.setError(null);
                     String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
+                    boolean isAdmin = snapshot.child(userUsername).child("isAdmin").getValue(Boolean.class);
 
                     if (Objects.equals(passwordFromDB, userPassword)) {
                         loginUsername.setError(null);
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class); //is this working?
                         startActivity(intent);
                     } else {
                         loginPassword.setError("Invalid Credentials");
@@ -113,5 +116,31 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+    }
+    private void addPredefinedUsers() {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference usersRef = database.getReference("users");
+
+        usersRef.child("testuser1").setValue(new User("testuser1", "testuser1", false));
+        usersRef.child("admin2").setValue(new User("admin2", "admin2", true));
+    }
+
+    public static class User {
+        public String username;
+        public String password;
+        public boolean isAdmin;
+
+        public User() {
+            this.username = "defaultUser";
+            this.password = "defaultPassword";
+            this.isAdmin = false;
+
+             }
+
+        public User(String username, String password, boolean isAdmin) {
+            this.username = username;
+            this.password = password;
+            this.isAdmin = isAdmin;
+        }
     }
 }
